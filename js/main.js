@@ -61,10 +61,10 @@ function displayProject() {
                                <div class='container'>
                                   <div class='row'>
                                         <div class='col-md-6'>  
-                                           <button class='btn btn-primary mt-2 w-100 p-2' onclick=markProject() >Mark As Done</button>
+                                           <button class='btn btn-primary mt-2 w-100 p-2' onclick=markProject('${project.id}') >Mark As Done</button>
                                         </div>
                                         <div class='col-md-6'>  
-                                           <button class='btn btn-primary mt-2 w-100 p-2' onclick=unmarkProject() >Mark As Undone</button>
+                                           <button class='btn btn-primary mt-2 w-100 p-2' onclick=unmarkProject('${project.id}') >Mark As Undone</button>
                                         </div>
                                   </div>
                                
@@ -104,13 +104,27 @@ function deleteProject(id) {
     window.location = 'index.html'
 }
 // function to alert a project as done
-function markProject() {
-    alert('Project marked as done!');
+function markProject(id) {
+    const projects = JSON.parse(localStorage.getItem('projects'));
+    projects.forEach((project) => {
+        if (id == project.id) {
+            project.done = true;
+        }
+    })
+    localStorage.setItem('projects', JSON.stringify(projects));
+    window.location = 'index.html'
 }
 
-// function to alert a project as undone
-function unmarkProject() {
-    alert('Project unmarked as done!');
+// function to alert a project as not done
+function unmarkProject(id) {
+    const projects = JSON.parse(localStorage.getItem('projects'));
+    projects.forEach((project) => {
+        if (id == project.id) {
+            project.done = false;
+        }
+    })
+    localStorage.setItem('projects', JSON.stringify(projects));
+    window.location = 'index.html'
 }
 
 
