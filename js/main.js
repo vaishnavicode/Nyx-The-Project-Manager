@@ -28,7 +28,7 @@ function displayProject() {
                     <div class="row">
                         <div class="col-md-8">
                         
-                            <h3 class='text-success'>${project.id + 1}. ${project.title}</h3> 
+                            <h3 class='text-warning'>${project.id + 1}. ${project.title}</h3> 
                             <h5>Project Details</h5>
                             <p>${project.details}</p> 
                             <h5 class='technology'>${technology}</h5>
@@ -38,16 +38,16 @@ function displayProject() {
                             <div class=''>
                                 <div class='card-body'>
                                         <ul class='list-group'> 
-                                            <li class='list-group-item bg-success'>Priority : <span class='text-white'> ${project.priority}</span></li>
+                                            <li class='list-group-item bg-warning'>Priority : <span class='text-white'> ${project.priority}</span></li>
                                         </ul>
                                         <ul class='list-group  mt-2 status'> 
-                                        <li class='list-group-item bg-success'>Project Status:<span class='text-white'> ${project.done}</span></li>   
+                                        <li class='list-group-item bg-warning'>Project Status:<span class='text-white'> ${project.done}</span></li>   
                                         </ul>
                                         <ul class='list-group mt-2'> 
-                                            <li class='list-group-item bg-success'>Start Date : <span class='text-white'> ${project.startDate}</span></li>
+                                            <li class='list-group-item bg-warning'>Start Date : <span class='text-white'> ${project.startDate}</span></li>
                                         </ul>
                                         <ul class='list-group mt-2'> 
-                                            <li class='list-group-item bg-success'>Due Date : <span class='text-white'>${project.dueDate}</span></li>
+                                            <li class='list-group-item bg-warning'>Due Date : <span class='text-white'>${project.dueDate}</span></li>
                                        </ul>
                                        
                                     
