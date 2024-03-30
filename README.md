@@ -11,6 +11,9 @@ Project Manager App Using Javascript
 - Mark Project as a done project
 - Mark a project as udone
 # Used
+- Bootstrap 4
+- CSS
+- HTML
 - Vanilla Javascript
 # Javascript
 - Arrow functions
