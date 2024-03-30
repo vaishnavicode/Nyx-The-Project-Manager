@@ -101,7 +101,7 @@ function deleteProject(id) {
         }
     })
     localStorage.setItem('projects', JSON.stringify(projects));
-    window.location = 'index.html'
+    window.location = 'projects.html'
 }
 // function to alert a project as done
 function markProject(id) {
@@ -112,7 +112,7 @@ function markProject(id) {
         }
     })
     localStorage.setItem('projects', JSON.stringify(projects));
-    window.location = 'index.html'
+    window.location = 'projects.html'
 }
 
 // function to alert a project as not done
@@ -124,7 +124,7 @@ function unmarkProject(id) {
         }
     })
     localStorage.setItem('projects', JSON.stringify(projects));
-    window.location = 'index.html'
+    window.location = 'projects.html'
 }
 
 
