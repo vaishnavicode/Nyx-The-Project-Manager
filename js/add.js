@@ -80,7 +80,11 @@ function ValidateInput(object) {
     if (object.title == '' || object.details == '' || object.priority == '' || object.technology == ''
         || object.startDate == '' || object.dueDate == '') {
         displayAlert('Form Field Cant Be empty', 'alert-danger')
-    } else {
+    } else if(object.startDate > object.dueDate){
+        displayAlert('Start Date Cant Be Greater Than Due Date', 'alert-danger')
+
+    }
+    else {
         return false;
     }
 
